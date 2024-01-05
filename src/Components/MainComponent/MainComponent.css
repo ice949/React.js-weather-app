@@ -23,6 +23,7 @@
     gap: 15px;
     background-color: rgb(187, 187, 187, 0.2);
     border-radius: 20px;
+    padding: 20px;
 }
 
 .first-row {
@@ -115,6 +116,30 @@
     width: 100%;
     display: flex;
     gap: 10px;
+}
+
+.weekly-forecast-container {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.weekly-forecast {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.day-forecast {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.day-forecast img {
+    width: 50px;
 }
 
 @media screen and (min-width: 768px) {

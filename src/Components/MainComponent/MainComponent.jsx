@@ -6,24 +6,14 @@ import SearchComponent from "../SearchComponent/SearchComponent";
 import WeeklyForecast from "../WeeklyForecast/WeeklyForecast";
 import DailyForecast from "../DailyForecast/DailyForecast";
 import AirConditions from "../AirConditions/AirConditions";
+import DayOverview from "../Overview/DayOverview";
 
 const MainComponent = () => {
   return (
     <section className="MainComponent">
       <section className="first-column">
         <SearchComponent />
-        <div className="first-row">
-          <div className="details">
-            <div>
-              <h2>Madrid</h2>
-              <p>Chance of Rain 0%</p>
-            </div>
-            <h3>31°C</h3>
-          </div>
-          <div>
-            <img src={sun} alt="" />
-          </div>
-        </div>
+        <DayOverview />
         <DailyForecast />
         <AirConditions />
       </section>

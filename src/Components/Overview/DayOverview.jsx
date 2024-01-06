@@ -1,18 +1,18 @@
 import React from "react";
 import sun from "../../Assets/sun.png";
 
-const DayOverview = () => {
+const DayOverview = ({cityWeatherData}) => {
   return (
         <div className="first-row">
           <div className="details">
             <div>
-              <h2>Madrid</h2>
-              <p>Chance of Rain 0%</p>
+              <h2>{cityWeatherData.location.name}, {cityWeatherData.location.country}</h2>
+              <p>{cityWeatherData.current.condition.text}</p>
             </div>
-            <h3>31°C</h3>
+            <h3>{cityWeatherData.current.temp_c}°C</h3>
           </div>
           <div>
-            <img src={sun} alt="" />
+            <img src={cityWeatherData.current.condition.icon} alt="" />
           </div>
         </div>
   );

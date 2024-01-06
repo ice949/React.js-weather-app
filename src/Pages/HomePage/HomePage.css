@@ -4,6 +4,10 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
+    background-image: url("../../Assets/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     /* padding: 15px; */
 }
 

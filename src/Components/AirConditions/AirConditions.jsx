@@ -15,28 +15,28 @@ const AirConditions = ({cityWeatherData}) => {
           <FaTemperatureHigh />
           <div>
             <h4>Feels Like</h4>
-            <p>{Math.round((cityWeatherData.main.feels_like - 32) * 5/9)}°C</p>
+            <p>{cityWeatherData.current.feelslike_c}°C</p>
           </div>
         </div>
         <div className="air-condition">
           <FaWind />
           <div>
             <h4>Wind</h4>
-            <p>{cityWeatherData.wind.speed}km/h</p>
+            <p>{cityWeatherData.current.wind_kph}km/h</p>
           </div>
         </div>
         <div className="air-condition">
           <FaWater />
           <div>
             <h4>Humidity</h4>
-            <p>{cityWeatherData.main.humidity}%</p>
+            <p>{cityWeatherData.current.humidity}%</p>
           </div>
         </div>
         <div className="air-condition">
           <FaSun />
           <div>
             <h4>UV Index</h4>
-            <p>3</p>
+            <p>{cityWeatherData.current.uv}</p>
           </div>
         </div>
       </div>

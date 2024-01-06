@@ -6,13 +6,13 @@ const DayOverview = ({cityWeatherData}) => {
         <div className="first-row">
           <div className="details">
             <div>
-              <h2>{cityWeatherData.name}</h2>
-              <p>Chance of Rain 0%</p>
+              <h2>{cityWeatherData.location.name}, {cityWeatherData.location.country}</h2>
+              <p>{cityWeatherData.current.condition.text}</p>
             </div>
-            <h3>{Math.round((cityWeatherData.main.temp - 32) * 5/9)}°C</h3>
+            <h3>{cityWeatherData.current.temp_c}°C</h3>
           </div>
           <div>
-            <img src={sun} alt="" />
+            <img src={cityWeatherData.current.condition.icon} alt="" />
           </div>
         </div>
   );
